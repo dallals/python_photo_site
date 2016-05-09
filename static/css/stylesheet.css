@@ -1,0 +1,392 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+#container {
+    width: 1200px;
+    margin: 0px auto;
+    background-color: black;
+    color: white;
+}
+
+#header {
+    background-color: black;
+    margin-left:10px;
+    margin-right: 10px;
+    height: 70px;
+    color: white;
+}
+
+    #header h1 {
+        display: inline-block;
+        margin-left: 40px;
+        color: orange;
+        font-family: tahoma;
+        font-size: 2.6em;
+        width: 800px;
+        padding-top: 5px;
+    }
+
+    #header #logo {
+        width: 850px;
+        display: inline-block;
+        padding-top: 5px;
+    }
+
+
+#login_register {
+    display: inline-block; 
+    vertical-align: top;
+    width: 320px;
+}
+
+    #login_register a {
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+
+    #login_register input.submit_button {
+        background: orange;
+        border: 1px solid orange;
+        padding: 1px 4px;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+
+    #login_register input.input_fields {
+        background: white;
+    }
+
+#welcome_cart {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+    #welcome_cart a {
+        text-decoration: none;
+    }
+
+a{
+    color: white;
+}
+ 
+#corner {
+    display: inline-block;
+}
+#body {
+    padding: 10px;
+}
+#scroll {
+ 
+    overflow: auto;
+}
+ 
+ 
+#likes {
+    display: inline;
+}
+
+.thumbnails{
+    width: 280px;
+    vertical-align: top;
+    border: 3px solid gray;
+    margin-right: 11px
+}
+
+#bottom_pics{
+    width: 1200px;
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+#blue {
+    color: #99FFFF;
+}
+
+#nav {
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+    #nav ul li{
+        display: inline-block;
+        color: #D0D0D0;
+        font-size: 0.8em;
+        padding: 10px 20px;
+        border-right: 1px solid #404040;
+    }
+
+    #nav ul li a {
+        text-decoration: none;
+    }
+
+.register {
+    width: 280px;
+    height: 200px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    background-color: rgba(192,192,192,0.6);
+    color: black;
+    margin: 160px auto;
+    border: 2px solid #585858;
+}
+
+    .register h3 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .register input {
+        background-color: #e6e6e6;
+        margin: 3px;
+        font-weight: bold;
+    }
+.flex input.button {
+    margin-left: 125px;
+    background: orange;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#flashed_messages {
+    margin-left: 855px;
+    color: red;
+}
+
+#mainpic {
+    display: inline-block;
+    width: 950px;
+}
+
+    #mainpic img {
+        height: 98%;
+        width: 98%;
+    }
+
+#user_interaction{
+    display: inline-block;
+    vertical-align: top;
+}
+
+    #user_interaction input.cart_button {
+        padding: 3px 5px;
+        border-radius: 4px;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+
+    #user_interaction input.submit_button {
+        background: orange;
+        border: 1px solid orange;
+        padding: 1px 4px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+        #user_interaction #comments input.submit_button {
+            margin-left: 134px;
+        }
+
+    #user_interaction #comments {
+        margin-top: 40px;
+    }
+
+
+#comment_box{
+    width: 215px;
+    height: 250px;
+    background-color: #C8C8C8;
+    overflow: auto;
+    color: black;
+    font-size: 14px;
+    border: 3px solid #686868;
+    padding: 2px;
+}
+
+#blue_name {
+    font-weight: bold;
+    color: blue;
+}    
+
+#blue_title {
+    font-weight: bold;
+    color: #00CCFF;
+}
+
+#checkout {
+    width: 700px;
+    background-color: #303030;
+    margin: 0px 20px 30px 90px;
+    padding: 20px;
+    border: 5px solid #585858;
+    display: inline-block;
+} 
+
+    #checkout img{
+        width: 180px;
+    }
+
+    #checkout p{
+        margin-left: 100px;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 180px;
+        font-size: 24px;
+    }
+
+#purchase {
+    display: inline-block;
+    vertical-align: top;
+}
+
+    #purchase p {
+        margin: 20px 0px;
+        font-size: 24px;
+    }
+
+    #purchase #red{
+        color: red;
+        font-weight: bold;
+    }
+
+#pic_price {
+    font-size: 24px;
+    color: #FF3300;
+
+}
+
+#tabs img{
+    
+    border: 1px solid silver;
+    
+}
+#download_body {
+    width: 1060px;
+    margin: 50px auto;
+    font-family: tahoma;
+    background-color: #303030;
+    border: 5px solid #585858;
+    padding: 30px 0px 30px 100px;
+}
+
+
+    #download_body h3{
+        color: #00CCFF;
+        margin: 20px 0px;
+    }
+
+    #download_body li{
+        margin: 15px 0px 15px 50px;
+    }
+
+#tabs img {
+    border: 1px solid gray;
+    vertical-align: top;
+    margin-bottom: 10px;
+    width: 356px;
+    overflow: none;
+}
+
+/*#purchase_body{
+    width: 1200px;
+    height: 797px;
+    background-image: url("/static/MaunaKea-10.JPG");
+    border: 1px solid black;
+}*/
+
+#contact {
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    height: 180px;
+    width: 800px;   
+    background-color: rgba(192,192,192,0.3);
+    border: 1px solid #999999;
+    font-family: arial;
+    font-size: 12px;
+}
+
+    #contact h2{
+        margin-top: 40px;
+    }
+
+.reach_us {
+    margin: 40px 2px 20px 2px;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+}
+    .reach_us h3{
+        text-decoration: underline;
+    }
+
+#about {
+    padding: 50px;
+    margin: 50px auto;
+    text-align: center;
+    height: 200px;
+    width: 500px;   
+    background-color: rgba(192,192,192,0.3);
+    border: 1px solid #999999;
+    color: white;
+}
+
+#user_interaction p{
+    width: 215px;
+}
+.justify {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.flex {
+    display: flex;
+}
+
+#registration_body {
+    width: 1200px;
+    height: 797px;
+    background-image: url("/static/balloon.JPG");
+    border: 1px solid black;
+}
+
+#contact_body {
+    width: 1200px;
+    height: 800px;
+    background-image: url("/static/volcano.JPG"); 
+    border: 1px solid black;   
+}
+
+#about_body {
+    width: 1200px;
+    height: 800px;
+    background-image: url("/static/stars.JPG"); 
+    border: 1px solid black;   
+}
+
+#red_flash {
+    color: red;
+}
+
+#not_logged_in {
+    margin: 20px 0px;
+}
+
+.remove_from_cart {
+    font-size: 12px;
+}
+
+.pic_info {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 35px;
+}

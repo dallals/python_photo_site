@@ -1,0 +1,83 @@
+<!doctype html> 
+<html lang='en'>
+<head>
+	<title>Category</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/ui-darkness/jquery-ui.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  	<script type="text/javascript">
+  		$(function() {
+    		$( "#tabs" ).tabs();
+  		});
+  	</script>
+
+</head>
+<body>
+	<div id='container'>
+		<div id='header'>
+
+            <a href="/"><h1>Photo Dojo</h1></a>
+
+			{% if 'email' not in session %}
+                <div id="login_register">
+                    <p>Login</p>
+                    <form action="/login" method="POST">
+                        <input class="input_fields" type="text" name="email" placeholder="email">
+                        <input class="input_fields" type="password" name="password" placeholder="password">
+                        <input class="submit_button" type="submit" value="submit">  
+                    </form>
+                    <a href="/register">Not a user? Register <span id="blue">here</span></a>
+                </div>
+            {% else %}
+                <div id="welcome_cart">
+                    <p>Welcome {{ session['first_name']}} &nbsp &nbsp | &nbsp &nbsp <a href="/purchase">Cart ( {{ session['total_items']}} )</a> &nbsp &nbsp | &nbsp &nbsp<a href="/logout">Logout</a></p>
+                </div>
+
+            {% endif %}
+			
+		</div>
+		<div id="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/category">Categories </a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+		<div>
+			<div id='tabs'>
+				<ul>
+					<li><a href="#tabs-1">Sports</a></li>
+					<li><a href="#tabs-2">Editorials</a></li>
+					<li><a href="#tabs-3">Landscapes</a></li>
+				</ul>
+				<div id='tabs-1'>
+					{% for photo in session['all_photos'] %}
+						{% if photo['category'] == 'sports' %}
+							<a href="/display_photo/{{ photo['id'] }}"><img src="{{ photo['small_url'] }}"></a>
+						{% endif %}
+					{% endfor %}					
+				</div> 
+				<div id='tabs-2'>
+					{% for photo in session['all_photos'] %}
+						{% if photo['category'] == 'editorial' %}
+							<a href="/display_photo/{{ photo['id'] }}"><img src="{{ photo['small_url'] }}"></a>
+						{% endif %}
+					{% endfor %}			
+				</div>
+				<div id='tabs-3'>
+					{% for photo in session['all_photos'] %}
+						{% if photo['category'] == 'landscapes' %}
+							<a href="/display_photo/{{ photo['id'] }}"><img src="{{ photo['small_url'] }}"></a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+

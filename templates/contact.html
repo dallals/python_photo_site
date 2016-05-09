@@ -1,0 +1,72 @@
+<!doctype html> 
+<html lang='en'>
+<head>
+	<title>Picture</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+
+</head>
+<body>
+	<div id='container'>
+		<div id='header'>
+
+            <a href="/"><h1>Photo Dojo</h1></a>
+
+			{% if 'email' not in session %}
+                <div id="login_register">
+                    <p>Login</p>
+                    <form action="/login" method="POST">
+                        <input class="input_fields" type="text" name="email" placeholder="email">
+                        <input class="input_fields" type="password" name="password" placeholder="password">
+                        <input class="submit_button" type="submit" value="submit">  
+                    </form>
+                    <a href="/register">Not a user? Register <span id="blue">here</span></a>
+                </div>
+            {% else %}
+                <div id="welcome_cart">
+                    <p>Welcome {{ session['first_name']}} &nbsp &nbsp | &nbsp &nbsp <a href="/purchase">Cart ( {{ session['total_items']}} )</a> &nbsp &nbsp | &nbsp &nbsp<a href="/logout">Logout</a></p>
+                </div>
+
+            {% endif %}
+		</div>
+		<div id="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/category">Categories </a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div> <!--end of nav-->
+		<div id='contact_body'>
+
+			<div id='contact'>
+                <h2> Feel free to contact us using any of the three methods listed below!</h2>
+                <div class='reach_us'>
+                    <h3>Call us</h3>
+                    <h4>(888) 888-888</h4>
+                </div>
+                <div class='reach_us'>
+                    <h3>Visit us</h3>
+                    <h4>11 Fake Street, Fake, CA</h4>
+                </div>
+                <div class='reach_us'>
+                    <h3>Email</h3>
+                    <h4>fakeemail@email.com</h4> 
+                </div>
+            </div>
+
+		</div> <!-- end of body -->
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
